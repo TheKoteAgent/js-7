@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form Validation App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="main-container py-5">
+      <h1 class="app-title">Перевірка достовірності форм</h1>
+
+      <section class="task-section">
+        <h2 class="task-title"><b>Task 1.</b></h2>
+        <div class="task-description">
+          <p>
+            Заповніть форму інформації про користувача. Після заповнення форми виведіть всю введену інформацію у
+            текстовому вигляді в out-1. Також потрібно перевірити всі поля форми на достовірність введених даних.
+            Якщо данні не вірно вказані під полем виводим повідомлення про помилку, яка виникла.
+          </p>
+          <div class="requirements mt-4">
+            <p class="mb-1"><strong>First Name, Last Name</strong></p>
+            <ul>
+              <li>обов’язкове поле;</li>
+              <li>перша літера повина бути заглавна</li>
+              <li>тільки літери латинського алфавіта</li>
+              <li>не меньше 5 символів</li>
+              <li>не більше 25 символів</li>
+            </ul>
+            <p class="mb-1"><strong>Password</strong></p>
+            <ul>
+              <li>обов’язкове поле;</li>
+              <li>пароль містив хоча б один символ нижнього регістру, один — верхнього та одну цифру</li>
+              <li>довжена паролю мінімальна 8 символів, максимальна 20</li>
+            </ul>
+            <p class="mb-1"><strong>Email</strong></p>
+            <ul>
+              <li>обов’язкове поле;</li>
+              <li>тільки такі символи: літери, крапка, дефіс, нижнє підкреслення;</li>
+              <li>обов’язково мають бути символ @ і домен після @;</li>
+              <li>до символу @ мають стояти мінімум 3 інших символи.</li>
+            </ul>
+            <p class="mb-1"><strong>Address</strong></p>
+            <ul>
+              <li>обов’язкове поле;</li>
+              <li>тільки літери латинського алфавіта</li>
+              <li>не меньше 5 символів</li>
+            </ul>
+            <p class="mb-1"><strong>City</strong></p>
+            <ul>
+              <li>обов’язкове поле;</li>
+              <li>перша літера повина бути заглавна</li>
+              <li>тільки літери латинського алфавіта</li>
+              <li>не меньше 5 символів</li>
+              <li>не більше 25 символів</li>
+            </ul>
+            <p class="mb-1"><strong>Zip</strong></p>
+            <ul>
+              <li>обов’язкове поле;</li>
+              <li>поле має містити чітко 5 цифр</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="form-container mt-5" id="task-10">
+          <h3 class="form-title">Заповніть інформацію про користувача</h3>
+          <div class="row g-3">
+            <div class="col-md-6 field-group">
+              <label for="inputFirstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="inputFirstName" name="firstName" />
+            </div>
+            <div class="col-md-6 field-group">
+              <label for="inputLastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="inputLastName" name="lastName" />
+            </div>
+            <div class="col-md-6 field-group">
+              <label for="inputEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail" name="userEmail" />
+            </div>
+            <div class="col-md-6 field-group">
+              <label for="inputPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword" name="userPassword" />
+            </div>
+            <div class="col-12 field-group">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="" name="userAddress" />
+            </div>
+            <div class="col-md-6 field-group">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity" name="userCity" />
+            </div>
+            <div class="col-md-4 field-group">
+              <label for="inputRegion" class="form-label">Region</label>
+              <select id="inputRegion" class="form-select" name="userRegion">
+                <option selected>Choose...</option>
+                <option value="Kharkiv">Kharkiv</option>
+                <option value="Odesa">Odesa</option>
+                <option value="Dnipro">Dnipro</option>
+                <option value="Zaporizhzhia">Zaporizhzhia</option>
+                <option value="Mykolaiv">Mykolaiv</option>
+                <option value="Luhansk">Luhansk</option>
+                <option value="Vinnytsia">Vinnytsia</option>
+                <option value="Khmelnitskiy">Khmelnitskiy</option>
+                <option value="Chernihiv">Chernihiv</option>
+              </select>
+            </div>
+            <div class="col-md-2 field-group">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip" name="userZip" />
+            </div>
+            <div class="col-12 mt-4">
+              <button type="submit" class="btn-submit">Відправити форму</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="out-1" class="output-container mt-4"></div>
+      </section>
+    </div>
+  </body>
+</html>
